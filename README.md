@@ -1,43 +1,28 @@
 # Commercial Credit Risk Analytics: SBA Loan Default Analysis🏦💰
 
-## 1. Executive Summary
-This project analyzes historical Small Business Administration (SBA) commercial loans to identify patterns of credit risk and default. By evaluating borrower profiles, loan terms, and industry sectors, this analysis provides data-driven recommendations to strengthen underwriting processes, optimize loan portfolios, and minimize financial exposure to charged-off loans. 
+## Executive Summary:
+Using SQL Server and Power BI, I extracted and transformed historical SBA commercial loan data (2010–2019) to create an interactive dashboard tracking credit risk and loan defaults. After identifying that the largest financial risks stem from specific anomalous lenders and highly volatile industries—resulting in $3.46bn in total financial losses—I recommend that the risk management team implements targeted underwriting adjustments and stricter credit controls to minimize future exposure.
 
-The project demonstrates an end-to-end data analytics pipeline: from raw data extraction and robust structural cleaning in SQL Server to a minimalist, interactive executive dashboard in Power BI.
+## Business Problem:
+Financial institutions face significant capital risk when issuing commercial loans. While the SBA guarantees a portion of these loans, banks still absorb substantial losses when businesses default (`Charged Off`). How can we determine which industry sectors (NAICS), loan durations, and lending institutions present the highest default risks to make proactive adjustments to underwriting approvals and minimize financial exposure?
 
-## 2. Business Problem
-Financial institutions face significant capital risk when issuing commercial loans. While the SBA guarantees a portion of these loans, banks still absorb substantial losses when businesses default (`Charged Off`). The objective of this project is to build an analytical framework that answers critical business questions:
-- Which industry sectors (NAICS) present the highest default risks?
-- How does loan duration (`TermInMonths`) correlate with repayment success?
-- Which lending institutions exhibit systemic weaknesses in their underwriting approvals?
-- What are the highest-risk industries at a localized, state level?
+*(Include the SBA_Dashboard_View.png here to visually demonstrate the dashboard solution)*
 
-## 3. Data Source
-- **Dataset:** U.S. SBA Loan Data (2010–2019).
-- **Target Variable:** `LoanStatus` (Paid In Full vs. Charged Off).
+## Methodology (Skills):
+* **SQL Server (T-SQL):** Common Table Expressions (CTEs), Window Functions (`RANK() OVER`, `COUNT OVER PARTITION BY`), Data Cleaning, and `COALESCE` for missing values. Developed a robust Data Engineering pipeline using **Sequential Filtering** to first isolate major commercial banks (>500 loans) and then recalculate industry volumes strictly within that cohort (>100 loans) to eliminate statistical noise.
+* **Power BI:** Data visualization, interactive filtering, dynamic conditional formatting (highlighting risks >8%), and custom financial formatting for executive presentation.
 
-## 4. Methodology & Data Architecture
-- **Data Engineering & Sequential Filtering (SQL):** Extracted, cleaned, and transformed raw governmental data using T-SQL. A reusable View (`vw_clean_loan_data`) was created to ensure statistical significance by employing **Sequential Filtering**:
-    1. Isolated major commercial banks (lenders with >500 loans) using Window Functions (`COUNT OVER PARTITION BY`).
-    2. Recalculated industry volumes *strictly within* that filtered banking cohort, eliminating industries with <100 loans to remove statistical noise.
-    3. Handled missing values (`COALESCE`) and performed structural data type casting.
-- **Exploratory Data Analysis (SQL):** Aggregated default rates by industry, geography, and loan term using Common Table Expressions (CTEs) and Window Functions (`RANK() OVER`).
-- **Data Visualization (Power BI):** Developed an interactive, minimalist Credit Risk Dashboard enabling risk managers to filter exposure metrics dynamically. Incorporated conditional formatting and custom formatting for financial data.
+## Results & Business Recommendation:
+Creating this dashboard gives risk managers and financial stakeholders clear visibility into the commercial loan portfolio's vulnerabilities. This analysis showed us that total financial losses reached $3.46bn across the analyzed cohort. Furthermore, we identified significant variance in underwriting quality among top commercial banks, with Independence Bank exhibiting an anomalous ~60% default rate.
 
-## 5. SQL Query Portfolio
-The `SQL_Scripts` folder contains the core analytical queries driving this project:
-- `01_data.sql`: The foundational View performing data cleaning and sequential filtering.
-- `02_default_rate_by_industry.sql`: Risk analysis identifying the most volatile business sectors.
-- `03_risk_by_loan_term.sql`: Duration analysis segmenting loans into risk buckets.
-- `04_bank_underwriting_performance.sql`: Evaluation of commercial banks based on their historical default rates.
-- `05_state_industry_risk_ranking.sql`: Advanced query utilizing `RANK()` to pinpoint the top 3 riskiest industries within each US State.
+Because the biggest financial impacts will come from reducing exposure to these high-risk areas, I recommend a few business adjustments:
+1. **Audit High-Risk Lenders:** Initiate an immediate review of the loan approval workflows for lenders with default rates significantly exceeding the baseline (e.g., Independence Bank).
+2. **Tighten Industry Controls:** Implement stricter underwriting criteria for the top 3 highest-risk industries identified within each state.
+3. **Adjust Term Limits:** Restructure loan term offerings based on the duration analysis, as loan length heavily impacts repayment success.
 
-## 6. Key Findings
-- **Underwriting Variance:** Significant variance in underwriting quality exists among top commercial banks (e.g., Independence Bank exhibiting an anomalous ~60% default rate in the dataset).
-- **Industry Volatility:** Certain industries demonstrate disproportionately high default rates, requiring tighter credit controls.
-- **Financial Impact:** Total financial loss from defaults across the analyzed cohort reached $3.46bn.
+I believe these adjustments will best tackle the largest sources of financial loss, optimize the loan portfolio, and save the risk analytics team hours per week in ad-hoc exposure reporting.
 
-## 7. Executive Dashboard
-*(Screenshot of the final Power BI dashboard)*
-
-![SBA Dashboard](Dashboard/SBA_Dashboard_View.png)
+## Next Steps:
+1. Incorporate macroeconomic indicators (e.g., historical interest rates, state GDP growth) to analyze how broader economic cycles impact SBA default rates.
+2. Build a predictive machine learning model in Python (Scikit-Learn) to forecast the probability of default for incoming loan applications.
+3. Conduct user testing with risk managers to refine dashboard layout and ensure optimal UI/UX for daily monitoring.
