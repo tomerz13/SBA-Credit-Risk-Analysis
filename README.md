@@ -1,4 +1,4 @@
-# Commercial Credit Risk Analytics: SBA Loan Default Analysis
+# Commercial Credit Risk Analytics: SBA Loan Default Analysis 🏦💰
 
 ## 1. Executive Summary
 This project analyzes historical Small Business Administration (SBA) commercial loans to identify patterns of credit risk and default. By evaluating borrower profiles, loan terms, and industry sectors, this analysis provides data-driven recommendations to strengthen underwriting processes, optimize loan portfolios, and minimize financial exposure to charged-off loans. 
