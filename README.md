@@ -6,7 +6,8 @@ Using SQL Server and Power BI, I extracted and transformed historical SBA commer
 ## Business Problem:
 Financial institutions face significant capital risk when issuing commercial loans. While the SBA guarantees a portion of these loans, banks still absorb substantial losses when businesses default (`Charged Off`). How can we determine which industry sectors (NAICS), loan durations, and lending institutions present the highest default risks to make proactive adjustments to underwriting approvals and minimize financial exposure?
 
-*(Include the SBA_Dashboard_View.png here to visually demonstrate the dashboard solution)*
+<img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/73e828f1-d534-41dd-aea2-e0700ea671a1" />
+
 
 ## Methodology (Skills):
 * **SQL Server (T-SQL):** Common Table Expressions (CTEs), Window Functions (`RANK() OVER`, `COUNT OVER PARTITION BY`), Data Cleaning, and `COALESCE` for missing values. Developed a robust Data Engineering pipeline using **Sequential Filtering** to first isolate major commercial banks (>500 loans) and then recalculate industry volumes strictly within that cohort (>100 loans) to eliminate statistical noise.
