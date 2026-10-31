@@ -11,7 +11,7 @@ Financial institutions face significant capital risk when issuing commercial loa
 
 ## Methodology (Skills):
 * **SQL Server (T-SQL):** Common Table Expressions (CTEs), Window Functions (`RANK() OVER`, `COUNT OVER PARTITION BY`), Data Cleaning, and `COALESCE` for missing values. Developed a robust Data Engineering pipeline using **Sequential Filtering** to first isolate major commercial banks (>500 loans) and then recalculate industry volumes strictly within that cohort (>100 loans) to eliminate statistical noise.
-* **Power BI:** Data visualization, interactive filtering, dynamic conditional formatting (highlighting risks >8%), and custom financial formatting for executive presentation.
+* **Power BI:** Data visualization, interactive filtering and custom financial formatting for executive presentation.
 
 ## Results & Business Recommendation:
 Creating this dashboard gives risk managers and financial stakeholders clear visibility into the commercial loan portfolio's vulnerabilities. This analysis showed us that total financial losses reached $3.46bn across the analyzed cohort. Furthermore, we identified significant variance in underwriting quality among top commercial banks, with Independence Bank exhibiting an anomalous ~60% default rate.
