@@ -28,6 +28,6 @@ I believe these adjustments will best tackle the largest sources of financial lo
 2. Build a predictive machine learning model in Python (Scikit-Learn) to forecast the probability of default for incoming loan applications.
 3. Conduct user testing with risk managers to refine dashboard layout and ensure optimal UI/UX for daily monitoring.
 
-## Dashboad:
+## Dashboard
 <img width="1266" height="712" alt="SBA_Dashboard_View" src="https://github.com/user-attachments/assets/ded3674c-88da-4d15-9ec8-f1599a4b8ec7" />
 
