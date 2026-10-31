@@ -1,7 +1,7 @@
 # Commercial Credit Risk Analytics: SBA Loan Default Analysis🏦💰
 
 ## Executive Summary:
-Using SQL Server and Power BI, I extracted and transformed historical SBA commercial loan data (2010–2019) to create an interactive dashboard tracking credit risk and loan defaults. After identifying that the largest financial risks stem from specific anomalous lenders and highly volatile industries—resulting in $3.46bn in total financial losses—I recommend that the risk management team implements targeted underwriting adjustments and stricter credit controls to minimize future exposure.
+Using SQL Server and Power BI, I extracted and transformed historical SBA commercial loan data (2010–2019) to create an interactive dashboard tracking credit risk and loan defaults. After identifying that the largest financial risks stem from specific anomalous lenders and highly volatile industries - resulting in $3.46bn in total financial losses, I recommend that the risk management team implements targeted underwriting adjustments and stricter credit controls to minimize future exposure.
 
 ## Business Problem:
 Financial institutions face significant capital risk when issuing commercial loans. While the SBA guarantees a portion of these loans, banks still absorb substantial losses when businesses default (`Charged Off`). How can we determine which industry sectors (NAICS), loan durations, and lending institutions present the highest default risks to make proactive adjustments to underwriting approvals and minimize financial exposure?
