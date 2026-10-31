@@ -18,7 +18,7 @@ Creating this dashboard gives risk managers and financial stakeholders clear vis
 
 Because the biggest financial impacts will come from reducing exposure to these high-risk areas, I recommend a few business adjustments:
 1. **Audit High-Risk Lenders:** Initiate an immediate review of the loan approval workflows for lenders with default rates significantly exceeding the baseline (e.g., Independence Bank).
-2. **Tighten Industry Controls:** Implement stricter underwriting criteria for the top 3 highest-risk industries identified within each state.
+2. **Tighten Industry Controls:** Implement stricter underwriting criteria for the highest-risk industries identified within each state.
 3. **Adjust Term Limits:** Restructure loan term offerings based on the duration analysis, as loan length heavily impacts repayment success.
 
 I believe these adjustments will best tackle the largest sources of financial loss, optimize the loan portfolio, and save the risk analytics team hours per week in ad-hoc exposure reporting.
