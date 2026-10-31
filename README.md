@@ -14,7 +14,7 @@ Financial institutions face significant capital risk when issuing commercial loa
 * **Power BI:** Data visualization, interactive filtering and custom financial formatting for executive presentation.
 
 ## Results & Business Recommendation:
-Creating this dashboard gives risk managers and financial stakeholders clear visibility into the commercial loan portfolio's vulnerabilities. This analysis showed us that total financial losses reached $3.46bn across the analyzed cohort. Furthermore, we identified significant variance in underwriting quality among top commercial banks, with Independence Bank exhibiting an anomalous ~60% default rate.
+Creating this dashboard gives risk managers and financial stakeholders clear visibility into the commercial loan portfolio's vulnerabilities. This analysis showed us that total financial losses reached $3.46bn across the analyzed cohort. Furthermore, I identified significant variance in underwriting quality among top commercial banks, with Independence Bank exhibiting an anomalous ~60% default rate.
 
 Industry volatility also plays a major role in credit risk. The analysis identified the three highest-risk sectors:
 - **Household Appliances & Electric Housewares (28.13% Default Rate):** Likely driven by severe competition from big-box retailers and margin compression.
